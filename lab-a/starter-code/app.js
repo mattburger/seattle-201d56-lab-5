@@ -15,7 +15,7 @@ function sum(a, b) { //eslint-disable-line
   var tmpTotal = tmpA + tmpB;
   sumArr.push(tmpTotal);
   sumArr.push('The sum of ' + tmpA + ' and ' + tmpB + ' is ' + tmpTotal + '.');
-  console.log(sumArr);
+  //console.log(sumArr);
   return sumArr;
 }
 // Here is the test for sum(); uncomment it to run it 
@@ -39,12 +39,12 @@ function multiply(a, b) { //eslint-disable-line
   var tmpTotal = tmpA * tmpB;
   proArr.push(tmpTotal);
   proArr.push('The product of ' + tmpA + ' and ' + tmpB + ' is ' + tmpTotal + '.');
-  console.log(proArr);
+  //console.log(proArr);
   return proArr;
 }
 
 // Here is the test for multiply(); uncomment it to run it
- testMultiply(5,9);
+// testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -61,7 +61,20 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+  var smArr = [];
+  var tmpA = parseInt(a);
+  var tmpB = parseInt(b);
+  var tmpC = parseInt(c);
+  var tmpSum1 = sum(tmpA,tmpB);
+  var tmpSum2 = sum(tmpC,tmpSum1[0]);
+  var tmpPro1 = multiply(tmpA, tmpB);
+  var tmpPro2 = multiply(tmpC,tmpPro1[0]);
+  smArr.push(tmpSum2[0]);
+  smArr.push(tmpPro2[0]);
+  smArr.push(tmpA + ' and ' + tmpB + ' and ' + tmpC + ' sum to ' + tmpSum2[0] + '.');
+  smArr.push('The product of ' + tmpA + ' and ' + tmpB + ' and ' + tmpC + ' is ' + tmpPro2[0] + '.');
+  //console.log(smArr);
+  return smArr;
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
