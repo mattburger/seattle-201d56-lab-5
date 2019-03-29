@@ -13,13 +13,13 @@ function sum(a, b) { //eslint-disable-line
   var tmpA = parseInt(a);
   var tmpB = parseInt(b);
   var tmpTotal = tmpA + tmpB;
-  sumArr.push(a+b);
+  sumArr.push(tmpTotal);
   sumArr.push('The sum of ' + tmpA + ' and ' + tmpB + ' is ' + tmpTotal + '.');
   console.log(sumArr);
   return sumArr;
 }
 // Here is the test for sum(); uncomment it to run it 
-//testSum(4, 7);
+ testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
