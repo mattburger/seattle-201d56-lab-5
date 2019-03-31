@@ -143,7 +143,7 @@ function multiplyArray(multArr) { //eslint-disable-line
   //console.log('pArr[0] = ' + pArr[0]);
   //console.log('pArr[1] = ' + pArr[1]);
   return pArr;
-} 
+}
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
@@ -170,7 +170,29 @@ Test this function by hand in the console to get it working, and when you think 
 var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+  var product = 1;
+  var tmpArr;
+  var pArr = [];
+  var tmpStr = '';
+  var dStr = '';
+  for(var i = 0; i < dynamicArray.length; i++){
+    tmpArr = multiply(product,dynamicArray[i]);
+    product = tmpArr[0];
+    //console.log('Product at i = ' + i + ': ' + product);
+    tmpStr = dynamicArray[i].toString();
+    if(i === dynamicArray.length - 1){
+      dStr += tmpStr + ' ';
+    }
+    else{
+      dStr += tmpStr + ',';
+    }
+  }
+  pArr.push(product);
+  pArr.push('The numbers ' + dStr + 'have a product of ' + product + '.');
+  //console.log('dStr: ' + dStr);
+  //console.log('pArr[0] = ' + pArr[0]);
+  //console.log('pArr[1] = ' + pArr[1]);
+  return pArr;
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
