@@ -96,7 +96,18 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+  //var arrTotal = 0;
+  var total = 0;
+  var tmpArr;
+  var pArr = [];
+  for(var i = 0; i < sumArr.length; i++){
+    tmpArr = sum(total,sumArr[i]);
+    total = tmpArr[0];
+    //arrTotal += tmpArr[0];
+  }
+  pArr.push(total);
+  pArr.push(sumArr[0] + ',' + sumArr[1] + ',' + sumArr[2] + ' was passed in as an array of numbers, and ' + total + ' is their sum.');
+  return pArr;
 }
 
 // Here is the test for sumArray(); uncomment it to run it
