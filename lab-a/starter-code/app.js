@@ -96,14 +96,16 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-  //var arrTotal = 0;
+  //sum total
   var total = 0;
+  //holds the returned array from sum()
   var tmpArr;
+  //the array that will be returned
   var pArr = [];
   for(var i = 0; i < sumArr.length; i++){
     tmpArr = sum(total,sumArr[i]);
     total = tmpArr[0];
-    //arrTotal += tmpArr[0];
+    //end of for
   }
   pArr.push(total);
   pArr.push(sumArr[0] + ',' + sumArr[1] + ',' + sumArr[2] + ' was passed in as an array of numbers, and ' + total + ' is their sum.');
@@ -128,8 +130,20 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
-}
+  var product = 1;
+  var tmpArr;
+  var pArr = [];
+  for(var i = 0; i < multArr.length; i++){
+    tmpArr = multiply(product,multArr[i]);
+    product = tmpArr[0];
+    //console.log('Product at i = ' + i + ': ' + product);
+  }
+  pArr.push(product);
+  pArr.push('The numbers ' + multArr[0] + ',' + multArr[1] + ',' + multArr[2] + ' have a product of ' + product + '.');
+  //console.log('pArr[0] = ' + pArr[0]);
+  //console.log('pArr[1] = ' + pArr[1]);
+  return pArr;
+} 
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
