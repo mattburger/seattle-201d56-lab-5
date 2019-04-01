@@ -15,7 +15,7 @@ function sum(a, b) { //eslint-disable-line
   var tmpTotal = tmpA + tmpB;
   sumArr.push(tmpTotal);
   sumArr.push('The sum of ' + tmpA + ' and ' + tmpB + ' is ' + tmpTotal + '.');
-  //console.log(sumArr);
+
   return sumArr;
 }
 // Here is the test for sum(); uncomment it to run it 
@@ -39,7 +39,7 @@ function multiply(a, b) { //eslint-disable-line
   var tmpTotal = tmpA * tmpB;
   proArr.push(tmpTotal);
   proArr.push('The product of ' + tmpA + ' and ' + tmpB + ' is ' + tmpTotal + '.');
-  //console.log(proArr);
+
   return proArr;
 }
 
@@ -73,7 +73,7 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
   smArr.push(tmpPro2[0]);
   smArr.push(tmpA + ' and ' + tmpB + ' and ' + tmpC + ' sum to ' + tmpSum2[0] + '.');
   smArr.push('The product of ' + tmpA + ' and ' + tmpB + ' and ' + tmpC + ' is ' + tmpPro2[0] + '.');
-  //console.log(smArr);
+
   return smArr;
 }
 
@@ -136,12 +136,11 @@ function multiplyArray(multArr) { //eslint-disable-line
   for(var i = 0; i < multArr.length; i++){
     tmpArr = multiply(product,multArr[i]);
     product = tmpArr[0];
-    //console.log('Product at i = ' + i + ': ' + product);
+
   }
   pArr.push(product);
   pArr.push('The numbers ' + multArr[0] + ',' + multArr[1] + ',' + multArr[2] + ' have a product of ' + product + '.');
-  //console.log('pArr[0] = ' + pArr[0]);
-  //console.log('pArr[1] = ' + pArr[1]);
+
   return pArr;
 }
 
@@ -178,7 +177,7 @@ function multiplyAnyArray(dynamicArray) { //eslint-disable-line
   for(var i = 0; i < dynamicArray.length; i++){
     tmpArr = multiply(product,dynamicArray[i]);
     product = tmpArr[0];
-    //console.log('Product at i = ' + i + ': ' + product);
+
     tmpStr = dynamicArray[i].toString();
     if(i === dynamicArray.length - 1){
       dStr += tmpStr + ' ';
@@ -189,9 +188,7 @@ function multiplyAnyArray(dynamicArray) { //eslint-disable-line
   }
   pArr.push(product);
   pArr.push('The numbers ' + dStr + 'have a product of ' + product + '.');
-  //console.log('dStr: ' + dStr);
-  //console.log('pArr[0] = ' + pArr[0]);
-  //console.log('pArr[1] = ' + pArr[1]);
+
   return pArr;
 }
 
